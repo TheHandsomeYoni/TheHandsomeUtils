@@ -145,6 +145,4 @@ public class AdvancedIntegerUtils {
         return (int) (1 / Math.sin(angle * Math.PI / 180));
     }
 
-
-
 }

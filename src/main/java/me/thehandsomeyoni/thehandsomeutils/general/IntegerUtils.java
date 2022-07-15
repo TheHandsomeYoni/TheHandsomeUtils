@@ -137,16 +137,24 @@ public boolean isPrime() {
     }
 
     // standard form.
-    public int standardForm() {
+    public float standardForm() {
         int n = 0;
-        if(i < 0) {
+        float f = this.i;
+        if(f < 0) {
             throw new IllegalArgumentException("The number is negative");
         }
-        while(i > 10 && 0 > i){
-            i = i/10;
+
+        while(f > 10) {
+            f /= 10;
             n++;
+            if(f == 10){
+                f /= 10;
+                n++;
+            }
         }
-        return i;
+        System.out.println(f + "*10^" + n);
+        return f;
+
     }
 
 
